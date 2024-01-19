@@ -3,9 +3,10 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("_͟1͟_͟|͟_͟2͟_͟|͟_͟3͟_͟");
-        Console.WriteLine("_͟4͟_͟|͟_͟5͟_͟|͟_͟6͟_͟");
+        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟3͟ ");
+        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟6͟ ");
         Console.WriteLine(" 7 | 8 | 9 ");
+        Console.ReadLine();
     }
     public static void xInTopLeft()
     {
