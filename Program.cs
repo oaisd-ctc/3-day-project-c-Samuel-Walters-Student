@@ -1,9 +1,14 @@
-﻿using System;
+using System;
 using System.Linq.Expressions;
 public class Program
 {
     public static void Main(string[] args)
     {
+      Console.WriteLine("Congratulations!");
+      Console.ReadLine();
+      Console.WriteLine("Press ENTER to confirm success.");
+      Console.ReadKey();
+    }
         int numberOfPlayers = 1;
         bool loop = true;
         while (loop == true)
@@ -46,11 +51,7 @@ public class Program
                 Console.WriteLine("can't go below 1");
                 Console.ReadKey();
             }
-
-
-
         }
-
         Console.Clear();
         int randnum = new Random().Next(1, 7);
         Console.WriteLine(randnum);
@@ -64,23 +65,4 @@ public class Program
     // |    /  |
     // |       |
     // |       |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
