@@ -20,7 +20,8 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-dotnettools.csharp",
-				"formulahendry.code-runner"
+				"formulahendry.code-runner",
+				"ms-dotnettools.csdevkit"
 			]
 		}
 	},
