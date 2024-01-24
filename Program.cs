@@ -1,85 +1,71 @@
 ﻿using System;
+using System.Linq.Expressions;
 public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟3͟ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟6͟ ");
-        Console.WriteLine(" 7 | 8 | 9 ");
-        Console.ReadLine();
-    }
-    public static void xInTopLeft()
-    {
+        int numberOfPlayers = 1;
+        bool loop = true;
+        while (loop == true)
+        {
 
-        Console.WriteLine(" ͟X_|͟ ͟2͟ ͟|͟ ͟3͟ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟6͟ ");
-        Console.WriteLine(" 7 | 8 | 9 ");
-    }
-
-
-    public static void xInTopMiddle()
-    {
-
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟X_|͟ ͟3͟ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟6͟ ");
-        Console.WriteLine(" 7 | 8 | 9 ");
-
-    }
-    public static void xInTopRight()
-    {
-
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟X_ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟6͟ ");
-        Console.WriteLine(" 7 | 8 | 9 ");
-    }
-    public static void xInMiddleLeft()
-    {
-
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟3͟ ");
-        Console.WriteLine(" ͟X_|͟ ͟5͟ ͟|͟ ͟6͟ ");
-        Console.WriteLine(" 7 | 8 | 9 ");
-    }
-
-    public static void xInMiddleMiddle()
-    {
-
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟3͟ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟X_|͟ ͟6͟ ");
-        Console.WriteLine(" 7 | 8 | 9 ");
-
-    }
-    public static void xInMiddleRight()
-    {
+            Console.Clear();
+            Console.WriteLine("█▀▀▀   ▀█▀   █     █    █     █            ");
+            Console.WriteLine("█▄▄▄    █    █     █     ▀▄▄▄▀     ██  ██  ");
+            Console.WriteLine("   █    █    █     █       █               ");
+            Console.WriteLine("▄▄▄█   ▄█▄   █▄▄   █▄▄     █      ▀▄▄▄▄▄▄▀ ");
+            Console.WriteLine("                                           ");
+            Console.WriteLine("█▀▀▀█  ▄▀▀▄  █  █  █   █▀▀ ▀▀█▀▀ ▀▀█▀▀ █▀▀ ");
+            Console.WriteLine("█▄▄▄█  █  █  █  █  █   █     █     █   █   ");
+            Console.WriteLine("█▀▄    █  █  █  █  █   █▀▀   █     █   █▀▀ ");
+            Console.WriteLine("█  ▀▄   ▀▀    ▀▀   █▄▄ █▄▄   █     █   █▄▄ ");
+            Console.WriteLine();
+            Console.WriteLine($"        press the < or > arrow keys ");
+            Console.WriteLine($"        to change nummber of players");
+            Console.WriteLine($"                    <{numberOfPlayers}>       ");
+            Console.WriteLine("           press enter to start             ");
+            ConsoleKeyInfo cki;
+            cki = Console.ReadKey();
+            if (cki.Key.ToString() == "RightArrow")
+            {
+                Console.WriteLine("right");
+                numberOfPlayers++;
+            }
+            else if (cki.Key.ToString() == "LeftArrow" && numberOfPlayers > 1)
+            {
+                Console.WriteLine("left");
+                numberOfPlayers--;
+            }
+            else if (cki.Key.ToString() == "Enter")
+            {
+                Console.WriteLine("enter");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("can't go below 1");
+                Console.ReadKey();
+            }
 
 
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟3͟ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟X_");
-        Console.WriteLine(" 7 | 8 | 9 ");
+
+        }
+
+        Console.Clear();
+        int randnum = new Random().Next(1, 7);
+        Console.WriteLine(randnum);
     }
 
-    public static void xInBottomLeft()
-    {
 
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟3͟ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟6͟ ");
-        Console.WriteLine(" X | 8 | 9 ");
-    }
-    public static void xInBottomMiddle()
-    {
-
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟3͟ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟6͟ ");
-        Console.WriteLine(" 7 | X | 9 ");
-    }
-
-    public static void xInBottomRight()
-    {
+    //  
+    //     _
+    //    /@\\  
+    // |-------|
+    // |    /  |
+    // |       |
+    // |       |
 
 
-        Console.WriteLine(" ͟1͟ ͟|͟ ͟2͟ ͟|͟ ͟3͟ ");
-        Console.WriteLine(" ͟4͟ ͟|͟ ͟5͟ ͟|͟ ͟6͟ ");
-        Console.WriteLine(" 7 | 8 | X ");
-    }
 
 
 
