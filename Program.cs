@@ -4,11 +4,6 @@ public class Program
 {
     public static void Main(string[] args)
     {
-      Console.WriteLine("Congratulations!");
-      Console.ReadLine();
-      Console.WriteLine("Press ENTER to confirm success.");
-      Console.ReadKey();
-    }
         int numberOfPlayers = 1;
         bool loop = true;
         while (loop == true)
@@ -55,10 +50,8 @@ public class Program
         Console.Clear();
         int randnum = new Random().Next(1, 7);
         Console.WriteLine(randnum);
-    }
-
-
-    //  
+        bool[] Isdead = bool[numberOfPlayers - 1];
+    } 
     //     _
     //    /@\\  
     // |-------|
