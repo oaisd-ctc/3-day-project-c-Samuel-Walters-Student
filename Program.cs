@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq.Expressions;
 public class Program
 {
@@ -52,7 +52,6 @@ public static void directions()
     }
     public static void TitleScreen()
     {
-
         bool loop = true;
         while (loop == true)
         {
@@ -94,24 +93,5 @@ public static void directions()
                 Console.WriteLine("can't go below 1");
                 Console.ReadKey();
             }
-
-
-
         }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
