@@ -2,9 +2,56 @@
 using System.Linq.Expressions;
 public class Program
 {
+    public static int numberOfPlayers = 1;
     public static void Main(string[] args)
     {
-        int numberOfPlayers = 1;
+        TitleScreen();
+
+        Game();
+    }
+
+
+    //  
+    //     _
+    //    /@\\  
+    // |-------|
+    // |    /  |
+    // |       |
+    // |       |
+
+
+public static void directions()
+{
+    
+}
+    public static void Game()
+    {
+        int sillyNummber = 5;
+        bool[] players = new bool[numberOfPlayers - 1];
+        Console.Clear();
+        for (int i = 0; i <= players.Length; i++)
+        {
+
+            if (players[i])
+            {
+                continue;
+            }
+            else
+            {
+        int randnum = new Random().Next(1, 7);
+        Console.WriteLine("Player "+(i+1));
+            
+
+
+            }
+
+
+        }
+
+    }
+    public static void TitleScreen()
+    {
+
         bool loop = true;
         while (loop == true)
         {
@@ -50,24 +97,7 @@ public class Program
 
 
         }
-
-        Console.Clear();
-        int randnum = new Random().Next(1, 7);
-        Console.WriteLine(randnum);
     }
-
-
-    //  
-    //     _
-    //    /@\\  
-    // |-------|
-    // |    /  |
-    // |       |
-    // |       |
-
-
-
-
 
 
 
