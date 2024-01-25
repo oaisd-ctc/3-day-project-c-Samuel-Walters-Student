@@ -1,15 +1,69 @@
-using System;
+﻿using System;
 using System.Linq.Expressions;
 public class Program
 {
+    public static int numberOfPlayers = 1;
     public static void Main(string[] args)
     {
-      Console.WriteLine("Congratulations!");
-      Console.ReadLine();
-      Console.WriteLine("Press ENTER to confirm success.");
-      Console.ReadKey();
+        TitleScreen();
+
+        Game();
     }
-        int numberOfPlayers = 1;
+
+
+    //  
+    //     _
+    //    /@\\  
+    // |-------|
+    // |    /  |
+    // |       |
+    // |       |
+
+
+    public static void directions()
+    {
+
+    }
+    public static void Game()
+    {
+        int sillyNummber = 5;
+        bool[] players = new bool[numberOfPlayers - 1];
+        Console.Clear();
+        for (int i = 0; i <= players.Length; i++)
+        {
+
+            if (players[i])
+            {
+                Console.WriteLine(" you live to silly another day");
+                Thread.Sleep(3000);
+                continue;
+            }
+            else
+            {
+                int randnum = new Random().Next(1, 7);
+                Console.WriteLine("Player " + (i + 1));
+                Console.WriteLine("press any key to risk it all");
+                Console.ReadKey();
+                if (randnum == sillyNummber)
+                {
+                    diescreen();
+
+
+
+                }
+
+
+
+
+            }
+
+
+        }
+
+    }
+    public static void TitleScreen()
+    {
+
         bool loop = true;
         while (loop == true)
         {
@@ -51,18 +105,33 @@ public class Program
                 Console.WriteLine("can't go below 1");
                 Console.ReadKey();
             }
+
+
+
         }
-        Console.Clear();
-        int randnum = new Random().Next(1, 7);
-        Console.WriteLine(randnum);
+    }
+    public static void diescreen()
+    {
+        Console.WriteLine("             _________");
+        Console.WriteLine("            |         |");
+        Console.WriteLine("            |  R.I.P  |");
+        Console.WriteLine("            |   got   |");
+        Console.WriteLine("     {@}    |too silly|");
+        Console.WriteLine("______|_____|_________|_________");
     }
 
 
-    //  
-    //     _
-    //    /@\\  
-    // |-------|
-    // |    /  |
-    // |       |
-    // |       |
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
