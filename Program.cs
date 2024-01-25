@@ -40,6 +40,7 @@ public static void directions()
             {
         int randnum = new Random().Next(1, 7);
         Console.WriteLine("Player "+(i+1));
+        
             
 
 
