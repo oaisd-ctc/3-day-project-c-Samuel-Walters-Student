@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq.Expressions;
 public class Program
 {
@@ -20,10 +20,10 @@ public class Program
     // |       |
 
 
-public static void directions()
-{
-    
-}
+    public static void directions()
+    {
+
+    }
     public static void Game()
     {
         int sillyNummber = 5;
@@ -34,14 +34,25 @@ public static void directions()
 
             if (players[i])
             {
+                Console.WriteLine(" you live to silly another day");
+                Thread.Sleep(3000);
                 continue;
             }
             else
             {
-        int randnum = new Random().Next(1, 7);
-        Console.WriteLine("Player "+(i+1));
-        
-            
+                int randnum = new Random().Next(1, 7);
+                Console.WriteLine("Player " + (i + 1));
+                Console.WriteLine("press any key to risk it all");
+                Console.ReadKey();
+                if (randnum == sillyNummber)
+                {
+                    diescreen();
+
+
+
+                }
+
+
 
 
             }
@@ -52,6 +63,7 @@ public static void directions()
     }
     public static void TitleScreen()
     {
+
         bool loop = true;
         while (loop == true)
         {
@@ -93,5 +105,33 @@ public static void directions()
                 Console.WriteLine("can't go below 1");
                 Console.ReadKey();
             }
+
+
+
         }
+    }
+    public static void diescreen()
+    {
+        Console.WriteLine("             _________");
+        Console.WriteLine("            |         |");
+        Console.WriteLine("            |  R.I.P  |");
+        Console.WriteLine("            |   got   |");
+        Console.WriteLine("     {@}    |too silly|");
+        Console.WriteLine("______|_____|_________|_________");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
